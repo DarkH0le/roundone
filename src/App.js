@@ -125,7 +125,7 @@ class App extends Component {
 
     render() {
         return (
-            <div>
+            <div >
                 <Navigation
                     user={this.state.user}
                     logOutUser={this.logOutUser} />

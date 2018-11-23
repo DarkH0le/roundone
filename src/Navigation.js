@@ -20,15 +20,23 @@ class Navigation extends Component {
         };
         this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
     }
-
+    componentDidUpdate(prevProps) {
+        // Typical usage (don't forget to compare props):
+        if (this.state.sidebarOpen) {
+            document.getElementById("sideNav").style.width = "300px";
+            document.getElementById("sideNav").style.zIndex= "10000";
+        } else {
+            document.getElementById("sideNav").style.width = "0px";
+        }
+    }
     onSetSidebarOpen(open) {
         this.setState({ sidebarOpen: open });
+        document.getElementById("sideNav").style.width = "300px";
     }
 
     onSetSideOpenbarClose = () => {
         this.setState({ sidebarOpen: false });
     }
-
 
     render() {
         const { user, logOutUser } = this.props;
@@ -36,10 +44,15 @@ class Navigation extends Component {
         return (
             <div>
 {/*Side nav-bar                */}
+
+<div id="sideNav" className="sticky-top" style={{
+    height: "100vh",
+    position: "fixed"
+}}>
                 <Sidebar
                     sidebar={
                         <div className="h-100 bg-light">
-                            <div className="mx-auto">
+                            <div>
 
                                 <h2 className="text-dark m-2 text-center" ><FaBlind className="text-dark"></FaBlind>Menu</h2>
                                 <div style={{
@@ -81,51 +94,55 @@ class Navigation extends Component {
                     } //endsidebar
                     open={this.state.sidebarOpen}
                     onSetOpen={this.onSetSidebarOpen}
-                    styles={{ sidebar: { background: "white"}
-                    }}
-                children={<div>hola</div>}>
+                    styles={{ sidebar: { background: "white",float: "left", overflow: "hidden"}
+
+                    }}>
                 </Sidebar>
+</div>
 
 {/*Main nav-bar*/}
-                <nav className="site-nav family-sans navbar navbar-expand bg-primary navbar-dark higher">
-                    <div className="container-fluid">
-                        {/*<Buttn onClick={() => this.onSetSidebarOpen(true)}>*/}
+                <div style={{overflow: "hidden",clear:"both",padding:"28px"}} >
+                    <nav className="navbar fixed-top text-dark bg-light site-nav family-sans navbar-expand bg-danger navbar-dark">
+                        <div className="container">
+                            {/*<Buttn onClick={() => this.onSetSidebarOpen(true)}>*/}
                             {/*<FaBars/>Open sidebar*/}
-                        {/*</Buttn>*/}
-                        <IconButton color="primary" className="mr-2" component="span" onClick={() => this.onSetSidebarOpen(true)}>
-                            <FaBars />
-                        </IconButton>
-                        <Link to="/" className="navbar-brand font-weight-bold">
-                            <FaFistRaised className="mr-1" /> Round One Box & Fitness
-                        </Link>
-                        <div className="navbar-nav ml-auto">
-                            {user && (
-                                <Link className="nav-item nav-link" to="/meetings">
-                                    meetings
-                                </Link>
-                            )}
-                            {!user && (
-                                <Link className="nav-item nav-link" to="/login">
-                                    log in
-                                </Link>
-                            )}
-                            {!user && (
-                                <Link className="nav-item nav-link" to="/register">
-                                    register
-                                </Link>
-                            )}
-                            {user && (
-                                <Link
-                                    className="nav-item nav-link"
-                                    to="/login"
-                                    onClick={e => logOutUser(e)}>
-                                    log out
-                                </Link>
-                            )}
+                            {/*</Buttn>*/}
+                            <IconButton color="primary" className="mr-2" component="span" onClick={() => this.onSetSidebarOpen(true)}>
+                                <FaBars />
+                            </IconButton>
+                            <Link to="/" className="navbar-brand font-weight-bold text-dark">
+                                <FaFistRaised className="mr-1" /> Round One Box & Fitness
+                            </Link>
+                            <div className="navbar-nav">
+                                {user && (
+                                    <Link className="nav-item nav-link text-dark" to="/meetings">
+                                        meetings
+                                    </Link>
+                                )}
+                                {!user && (
+                                    <Link className="nav-item nav-link font-weight-bold btn btn-dark mr-2" to="/login">
+                                        Ingresar
+                                    </Link>
+                                )}
+                                {!user && (
+                                    <Link className="nav-item nav-link font-weight-bold text-dark btn btn-outline-dark" to="/register">
+                                        Registrar
+                                    </Link>
+                                )}
+                                {user && (
+                                    <Link
+                                        className="nav-item nav-link font-weight-bold btn btn-danger"
+                                        to="/login"
+                                        onClick={e => logOutUser(e)}>
+                                        Salir
+                                    </Link>
+                                )}
 
+                            </div>
                         </div>
-                    </div>
-                </nav>
+                    </nav>
+                </div>
+
             </div>
 
         );
