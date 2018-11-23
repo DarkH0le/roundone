@@ -58,7 +58,7 @@ class Login extends Component {
                         <div className="col-lg-6">
                             <div className="card bg-light">
                                 <div className="card-body">
-                                    <h3 className="font-weight-light mb-3">Log in</h3>
+                                    <h3 className="font-weight-light mb-3">Ingresar</h3>
                                     <section className="form-group">
                                         {this.state.errorMessage !== null ? (
                                             <FormError theMessage={this.state.errorMessage}/>
@@ -67,7 +67,7 @@ class Login extends Component {
                                             className="form-control-label sr-only"
                                             htmlFor="Email"
                                         >
-                                            Email
+                                            Correo
                                         </label>
                                         <input
                                             required
@@ -86,14 +86,14 @@ class Login extends Component {
                                             className="form-control"
                                             type="password"
                                             name="password"
-                                            placeholder="Password"
+                                            placeholder="Contraseña"
                                             value={this.state.password}
                                             onChange={this.handleChange}
                                         />
                                     </section>
                                     <div className="form-group text-right mb-0">
                                         <button className="btn btn-primary" type="submit">
-                                            Log in
+                                            Entrar
                                         </button>
                                     </div>
                                 </div>

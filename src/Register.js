@@ -64,7 +64,7 @@ class Register extends Component {
                         <div className="col-lg-8">
                             <div className="card bg-light">
                                 <div className="card-body">
-                                    <h3 className="font-weight-light mb-3">Register</h3>
+                                    <h3 className="font-weight-light mb-3">Registrar</h3>
                                     <div className="form-row">
                                         {this.state.errorMessage !== null ? (
                                             <FormError

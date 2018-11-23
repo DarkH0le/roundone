@@ -65,9 +65,9 @@ class Navigation extends Component {
                                 <Link to="/" className="navbar-brand d-block" onClick={this.onSetSideOpenbarClose}>
                                     <FaHome className="mr-1 color text-secondary" /> Inicio
                                 </Link>
-                                <Link to="/" className="navbar-brand m-1 d-block" onClick={this.onSetSideOpenbarClose}>
-                                    <FaEnvelopeOpenText className="mr-1 color text-secondary " /> Informacion
-                                </Link>
+                                {/*<Link to="/" className="navbar-brand m-1 d-block" onClick={this.onSetSideOpenbarClose}>*/}
+                                    {/*<FaEnvelopeOpenText className="mr-1 color text-secondary " /> Informacion*/}
+                                {/*</Link>*/}
                                 <Link to="/contacto" className="navbar-brand m-1 d-block" onClick={this.onSetSideOpenbarClose}>
                                     <FaInfoCircle className="mr-1 color text-secondary " /> Contacto
                                 </Link>
