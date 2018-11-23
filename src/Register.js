@@ -82,7 +82,7 @@ class Register extends Component {
                                                 className="form-control"
                                                 type="text"
                                                 id="displayName"
-                                                placeholder="Display Name"
+                                                placeholder="Nombre"
                                                 name="displayName"
                                                 required
                                                 value={this.state.displayName}
@@ -101,7 +101,7 @@ class Register extends Component {
                                             className="form-control"
                                             type="email"
                                             id="email"
-                                            placeholder="Email Address"
+                                            placeholder="Correo"
                                             required
                                             name="email"
                                             value={this.state.email}
@@ -114,7 +114,7 @@ class Register extends Component {
                                                 className="form-control"
                                                 type="password"
                                                 name="passOne"
-                                                placeholder="Password"
+                                                placeholder="Contraseña"
                                                 value={this.state.passOne}
                                                 onChange={this.handleChange}
                                             />
@@ -125,7 +125,7 @@ class Register extends Component {
                                                 type="password"
                                                 required
                                                 name="passTwo"
-                                                placeholder="Repeat Password"
+                                                placeholder="Confirmar contraseña"
                                                 value={this.state.passTwo}
                                                 onChange={this.handleChange}
                                             />
@@ -133,7 +133,7 @@ class Register extends Component {
                                     </div>
                                     <div className="form-group text-right mb-0">
                                         <button className="btn btn-primary" type="submit">
-                                            Register
+                                            Registrar
                                         </button>
                                     </div>
                                 </div>
