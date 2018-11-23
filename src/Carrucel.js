@@ -72,7 +72,7 @@ class Carrucel extends Component {
         const slides = items.map((item) => {
             return (
                 <CarouselItem
-                    className="custom-tag m-1"
+                    className="custom-tag"
                     tag="div"
                     key={item.id}
                     onExiting={this.onExiting}
@@ -89,7 +89,7 @@ class Carrucel extends Component {
                 <style>
                     {
                         `.custom-tag {
-                max-width: 99.5%;
+                max-width: 100%;
                 height: 500px;
                 background: black;
               }`

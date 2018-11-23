@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import {FaAngleDoubleDown} from 'react-icons/fa';
+import {FaMapMarkerAlt} from 'react-icons/fa';
 
 class GoogleMaps extends Component {
     static defaultProps = {
@@ -19,10 +20,11 @@ class GoogleMaps extends Component {
                     defaultCenter={this.props.center}
                     defaultZoom={this.props.zoom}
                 >
-                    <FaAngleDoubleDown
+                    <FaMapMarkerAlt
                         title={'The marker`s title will appear as a tooltip.'}
                         name={'SOMA'}
-                        position={{lat: 20.563038, lng: -103.449931}} />
+                        position={{lat: 20.563038, lng: -103.449931}} style={{fontSize: "48px",
+                    color: "red"}}/>
                 </GoogleMapReact>
         );
     }

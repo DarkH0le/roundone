@@ -68,11 +68,11 @@ class Navigation extends Component {
                                 <Link to="/" className="navbar-brand m-1 d-block" onClick={this.onSetSideOpenbarClose}>
                                     <FaEnvelopeOpenText className="mr-1 color text-secondary " /> Informacion
                                 </Link>
-                                <Link to="/" className="navbar-brand m-1 d-block" onClick={this.onSetSideOpenbarClose}>
+                                <Link to="/contacto" className="navbar-brand m-1 d-block" onClick={this.onSetSideOpenbarClose}>
                                     <FaInfoCircle className="mr-1 color text-secondary " /> Contacto
                                 </Link>
-                                <Link to="/" className="navbar-brand m-1 d-block" onClick={this.onSetSideOpenbarClose}>
-                                    <FaHome className="mr-1 color text-secondary " /> Instructores
+                                <Link to="/instalaciones" className="navbar-brand m-1 d-block" onClick={this.onSetSideOpenbarClose}>
+                                    <FaHome className="mr-1 color text-secondary " /> Instalaciones
                                 </Link>
                             </div>
                             <div className="fixed-bottom align-bottom">

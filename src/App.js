@@ -39,6 +39,8 @@ import Register from './Register';
 import Meetings from './Meetings';
 import CheckIn from './CheckIn';
 import HomeScreen from "./Home/HomeScreen";
+import HomeGallery from "./Home/HomeGallery";
+import Form from "./Form";
 
 class App extends Component {
     constructor() {
@@ -136,7 +138,7 @@ class App extends Component {
                     />
                 )}
 
-                <Router>
+                <Router className="m-4">
                     {/*<Home path="/" user={this.state.user} />*/}
                     <HomeScreen path="/"  />
                     <Login path="/login" />
@@ -151,6 +153,8 @@ class App extends Component {
                         path="/register"
                         registerUser={this.registerUser}
                     />
+                    <HomeGallery path="/instalaciones"/>
+                    <Form path="/contacto"/>
                 </Router>
             </div>
         );
