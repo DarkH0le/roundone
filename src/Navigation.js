@@ -116,7 +116,7 @@ class Navigation extends Component {
                             <div className="navbar-nav">
                                 {user && (
                                     <Link className="nav-item nav-link text-dark" to="/meetings">
-                                        meetings
+                                        Perfil
                                     </Link>
                                 )}
                                 {!user && (

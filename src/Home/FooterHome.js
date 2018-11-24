@@ -100,7 +100,7 @@ class FooterHome extends Component {
                     </div>
                 </div>
                 <div className="footer-copyright text-center text-black-50 py-3">© 2018 RoundOne:
-                    <a className="dark-grey-text" href="https://mdbootstrap.com/education/bootstrap/"> gitlink.com</a>
+                    <a className="dark-grey-text" href="https://mdbootstrap.com/education/bootstrap/"> https://roundone.herokuapp.com/</a>
                 </div>
 
             </footer>
